@@ -7,127 +7,133 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #fef1f2 0%, #fae8ff 100%);
+    /* Fondo oscuro futurista con degradado profundo */
+    background: linear-gradient(135deg, #0b0f19 0%, #111827 50%, #1e1b4b 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    color: #4c1d95;
+    color: #f3f4f6; /* Blanco brillante para textos generales */
 }
 
 .contenedor-app {
     max-width: 650px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(10px);
+    /* Panel translúcido (Efecto Glassmorphism oscuro) */
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: 40px 30px;
-    border-radius: 30px;
-    box-shadow: 0 20px 40px rgba(76, 29, 149, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     text-align: center;
 }
 
 /* Encabezado */
 h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3.2rem;
-    color: #db2777;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    letter-spacing: -0.05em;
+    /* Texto con degradado azul a violeta */
+    /* Texto con degradado azul a violeta */
+    background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    background-clip: text; /* <--- Agrega esta línea para quitar la advertencia */
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
 }
 
 .subtitulo {
-    font-size: 1rem;
-    color: #6b21a8;
+    font-size: 0.95rem;
+    color: #9ca3af; /* Gris claro */
     margin-bottom: 35px;
     font-weight: 400;
-    opacity: 0.85;
+    letter-spacing: 0.02em;
 }
 
 /* Grid del Calendario */
 .grid-calendario {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 18px;
+    gap: 16px;
 }
 
 /* Estilo Base de los Botones (Días) */
 .dia-boton {
     font-family: 'Poppins', sans-serif;
-    padding: 25px 15px;
-    font-size: 1.1rem;
+    padding: 22px 12px;
+    font-size: 1rem;
     font-weight: 600;
     border: none;
-    border-radius: 20px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s ease-in-out;
 }
 
-/* Botones DESBLOQUEADOS (Hermoso degradado rosa/morado) */
+/* Botones DESBLOQUEADOS (Azul a Violeta Eléctrico con brillo) */
 .desbloqueado {
-    background: linear-gradient(135deg, #ec4899 0%, #c084fc 100%);
-    color: white;
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
 .desbloqueado:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(236, 72, 153, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+    filter: brightness(1.1);
 }
 
 .desbloqueado:active {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
-/* Botones BLOQUEADOS (Estilo pastel sutil, no apagado ni feo) */
+/* Botones BLOQUEADOS (Gris oscuro con bordes sutiles sin brillos) */
 .bloqueado {
-    background-color: #f3e8ff;
-    color: #a78bfa;
-    border: 2px dashed #c084fc;
+    background-color: #1f2937;
+    color: #4b5563;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     cursor: not-allowed;
-    box-shadow: none;
 }
 
-.bloqueado:hover {
-    transform: shake 0.5s;
-    background-color: #ede9fe;
-}
-
-/* Ventana Emergente (Modal) */
+/* Ventana Emergente (Modal Modo Oscuro) */
 .modal {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(76, 29, 149, 0.25);
+    background-color: rgba(3, 7, 18, 0.6);
     backdrop-filter: blur(8px);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 999;
-    transition: opacity 0.3s ease;
 }
 
 .modal-contenido {
-    background: white;
+    background: #111827; /* Fondo gris oscuro */
     padding: 40px 30px;
-    border-radius: 24px;
+    border-radius: 16px;
     max-width: 450px;
     width: 90%;
     position: relative;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    animation: desplegar 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(124, 58, 237, 0.2); /* Borde sutil violeta */
+    animation: desplegar 0.3s ease-out;
     text-align: center;
 }
 
+/* Decoración superior dentro de la tarjeta flotante */
 .modal-decoracion {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
-    animation: latido 1.2s infinite;
+    color: #3b82f6; /* Azul */
+    animation: pulso 2s infinite;
 }
 
 #frase-texto {
-    font-size: 1.2rem;
-    color: #4c1d95;
+    font-size: 1.15rem;
+    color: #f3f4f6; /* Blanco */
     line-height: 1.6;
     font-weight: 400;
 }
@@ -140,24 +146,24 @@ h1 {
     position: absolute; 
     top: 15px; 
     right: 20px; 
-    font-size: 28px; 
-    color: #a78bfa;
+    font-size: 24px; 
+    color: #6b7280;
     cursor: pointer; 
     transition: color 0.2s;
 }
 
 .cerrar:hover {
-    color: #ec4899;
+    color: #ffffff;
 }
 
-/* Animaciones Modernas */
+/* Animaciones */
 @keyframes desplegar {
-    from { transform: scale(0.8); opacity: 0; }
+    from { transform: scale(0.95); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
 
-@keyframes latido {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+@keyframes pulso {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
 }

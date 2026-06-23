@@ -1,12 +1,21 @@
 // 1. Definimos las frases y sus fechas (Formato: Año-Mes-Día)
 // He configurado los primeros días con fechas que ya pasaron o que son hoy para que puedas probarlos.
 const datosCalendario = [
-    { fecha: "2026-06-21", diaAsignado: "21 Jun", frase: "¡Esta es una frase de un día que ya pasó! 🌟" },
-    { fecha: "2026-06-22", diaAsignado: "22 Jun", frase: "¡Ayer también está desbloqueado! ✨" },
-    { fecha: "2026-06-23", diaAsignado: "23 Jun", frase: "¡Hoy es 23 de junio! Felicidades, has desbloqueado la frase de hoy. 😊❤️" },
-    { fecha: "2026-06-24", diaAsignado: "24 Jun", frase: "Esta es la frase del 24 de junio. ¡Mañana podrás verla! 🕒" },
-    { fecha: "2026-06-27", diaAsignado: "27 Jun", frase: "¡Inicio oficial del calendario! 🎁" },
-    { fecha: "2026-07-11", diaAsignado: "11 Jul", frase: "¡Último día! Gracias por llegar hasta aquí. ❤️" }
+    { fecha: "2026-06-27", diaAsignado: "27 Jun", frase: "Apenas me fui y ya te extraño. Te amo 💕" },
+    { fecha: "2026-06-28", diaAsignado: "28 Jun", frase: "Día dos y ya hace falta verte. Disfruta tu domingo mi amor" },
+    { fecha: "2026-06-29", diaAsignado: "29 Jun", frase: "¡Con toda la actitud hoy! Éxito en la semana, amor. Desde acá te echo porras" },
+    { fecha: "2026-06-30", diaAsignado: "30 Jun", frase: "Recuerda que eres el amor de mi vida. Fin del comunicado" },
+    { fecha: "2026-07-01", diaAsignado: "1 Jul", frase: "Oficialmente ya es julio. Un mes hermoso porque es el mes en el que regreso a molestarte" },
+    { fecha: "2026-07-02", diaAsignado: "2 Jul", frase: "Si me extrañas, acuérdate de que yo a ti más. Gracias por apoyarme siempre, eres el mejor" },
+    { fecha: "2026-07-03", diaAsignado: "3 Jul", frase: "¡Por fin es viernes! Toma una mezcalita a mi salud y guárdame mis abrazos acumulados" },
+    { fecha: "2026-07-04", diaAsignado: "4 Jul", frase: "¡Mitad del viaje lista! Ya falta menos para volver a verte. Te amo" },
+    { fecha: "2026-07-05", diaAsignado: "5 Jul", frase: "Me encantaría hacer nada contigo este domingo. Ve una peli rica hoy" },
+    { fecha: "2026-07-06", diaAsignado: "6 Jul", frase: "¡Cumpleaños de mi persona favorita y último lunes separados. Cuenta regresiva activada..." },
+    { fecha: "2026-07-07", diaAsignado: "7 Jul", frase: "Te amo tanto, por si tenías la duda hoy por la mañana" },
+    { fecha: "2026-07-08", diaAsignado: "8 Jul", frase: "Me encantas y me haces una falta tremenda. Ya casi nos vemos" },
+    { fecha: "2026-07-09", diaAsignado: "9 Jul", frase: "Solo dos días más... Me debes muchos abrazos" },
+    { fecha: "2026-07-10", diaAsignado: "10 Jul", frase: "¡Es mañana! Duerme bien hoy porque este fin de semana te voy a cobrar todos los besos juntos" },
+    { fecha: "2026-07-11", diaAsignado: "11 Jul", frase: "Ya pronto nos vemos! Ya voy de regreso amor ❤️✨" }
 ];
 
 const contenedor = document.getElementById("calendario");
