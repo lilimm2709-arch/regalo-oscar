@@ -7,103 +7,115 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    /* Fondo oscuro futurista con degradado profundo */
-    background: linear-gradient(135deg, #0b0f19 0%, #111827 50%, #1e1b4b 100%);
+    /* Fondo con un patrón radial para simular un resplandor de luz en el centro */
+    background: radial-gradient(circle at center, #1e1b4b 0%, #0f111a 70%, #07080d 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    color: #f3f4f6; /* Blanco brillante para textos generales */
+    color: #f3f4f6;
+    overflow-x: hidden;
 }
 
+/* Contenedor Principal (Efecto Cristal de Nave Espacial) */
 .contenedor-app {
     max-width: 650px;
     width: 100%;
-    /* Panel translúcido (Efecto Glassmorphism oscuro) */
-    background: rgba(17, 24, 39, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 40px 30px;
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 50px 35px;
+    border-radius: 24px;
+    /* Sombra profunda + un sutil aura violeta */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 
+                0 0 80px rgba(99, 102, 241, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
 }
 
 /* Encabezado */
 h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 2.4rem;
-    letter-spacing: -0.05em;
-    /* Texto con degradado azul a violeta */
-    /* Texto con degradado azul a violeta */
-    background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+    font-weight: 700;
+    font-size: 2.6rem;
+    letter-spacing: -0.03em;
+    /* Degradado cibernético brillante */
+    background: linear-gradient(90deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
     -webkit-background-clip: text;
-    background-clip: text; /* <--- Agrega esta línea para quitar la advertencia */
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .subtitulo {
     font-size: 0.95rem;
-    color: #9ca3af; /* Gris claro */
-    margin-bottom: 35px;
-    font-weight: 400;
-    letter-spacing: 0.02em;
+    color: #9ca3af;
+    margin-bottom: 40px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
 }
 
 /* Grid del Calendario */
 .grid-calendario {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 16px;
+    gap: 20px;
 }
 
-/* Estilo Base de los Botones (Días) */
+/* Estilo Base de los Botones */
 .dia-boton {
     font-family: 'Poppins', sans-serif;
-    padding: 22px 12px;
-    font-size: 1rem;
+    padding: 25px 15px;
+    font-size: 1.05rem;
     font-weight: 600;
     border: none;
-    border-radius: 12px;
+    border-radius: 16px;
     cursor: pointer;
-    transition: all 0.25s ease-in-out;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-/* Botones DESBLOQUEADOS (Azul a Violeta Eléctrico con brillo) */
+/* 🟢 BOTONES DESBLOQUEADOS (Neón con reflejo interno) */
 .desbloqueado {
-    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
     color: #ffffff;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    border: 1px solid rgba(167, 139, 250, 0.4);
+    box-shadow: inset 0 0 12px rgba(167, 139, 250, 0.1),
+                0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .desbloqueado:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
-    filter: brightness(1.1);
+    transform: translateY(-5px) scale(1.02);
+    /* Al pasar el mouse, el botón "se enciende" con fuerza */
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    box-shadow: 0 12px 24px rgba(124, 58, 237, 0.3), 
+                0 0 20px rgba(167, 139, 250, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
-.desbloqueado:active {
-    transform: translateY(-1px);
-}
-
-/* Botones BLOQUEADOS (Gris oscuro con bordes sutiles sin brillos) */
+/* 🔴 BOTONES BLOQUEADOS (Apagados, semi-ocultos en el fondo) */
 .bloqueado {
-    background-color: #1f2937;
+    background: rgba(31, 41, 55, 0.2);
     color: #4b5563;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px dashed rgba(255, 255, 255, 0.05);
     cursor: not-allowed;
+    opacity: 0.6;
 }
 
-/* Ventana Emergente (Modal Modo Oscuro) */
+.bloqueado:hover {
+    /* Efecto denegado sutil al pasar el mouse por encima */
+    background: rgba(31, 41, 55, 0.3);
+    border-color: rgba(239, 68, 68, 0.2);
+    color: #6b7280;
+}
+
+/* Ventana Emergente (Modal de Cristal Avanzado) */
 .modal {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(3, 7, 18, 0.6);
-    backdrop-filter: blur(8px);
+    background-color: rgba(3, 7, 18, 0.7);
+    backdrop-filter: blur(12px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,31 +123,33 @@ h1 {
 }
 
 .modal-contenido {
-    background: #111827; /* Fondo gris oscuro */
-    padding: 40px 30px;
-    border-radius: 16px;
-    max-width: 450px;
+    background: rgba(17, 24, 39, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 45px 35px;
+    border-radius: 24px;
+    max-width: 460px;
     width: 90%;
     position: relative;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(124, 58, 237, 0.2); /* Borde sutil violeta */
-    animation: desplegar 0.3s ease-out;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    animation: desplegar 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.12);
     text-align: center;
 }
 
-/* Decoración superior dentro de la tarjeta flotante */
+/* Icono/Estrella flotante del modal */
 .modal-decoracion {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #3b82f6; /* Azul */
-    animation: pulso 2s infinite;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 12px #3b82f6);
+    animation: flotar 3s ease-in-out infinite;
 }
 
 #frase-texto {
-    font-size: 1.15rem;
-    color: #f3f4f6; /* Blanco */
-    line-height: 1.6;
+    font-size: 1.2rem;
+    color: #f3f4f6;
+    line-height: 1.7;
     font-weight: 400;
+    letter-spacing: 0.01em;
 }
 
 .oculto { 
@@ -144,26 +158,27 @@ h1 {
 
 .cerrar { 
     position: absolute; 
-    top: 15px; 
-    right: 20px; 
-    font-size: 24px; 
-    color: #6b7280;
+    top: 18px; 
+    right: 22px; 
+    font-size: 22px; 
+    color: #9ca3af;
     cursor: pointer; 
-    transition: color 0.2s;
+    transition: all 0.2s;
 }
 
 .cerrar:hover {
     color: #ffffff;
+    transform: scale(1.1);
 }
 
 /* Animaciones */
 @keyframes desplegar {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from { transform: scale(0.9) translateY(10px); opacity: 0; }
+    to { transform: scale(1) translateY(0); opacity: 1; }
 }
 
-@keyframes pulso {
-    0% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.05); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.8; }
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
 }
