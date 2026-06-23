@@ -10,12 +10,12 @@ const datosCalendario = [
     { fecha: "2026-07-03", diaAsignado: "3 Jul", frase: "¡Por fin es viernes! Toma una mezcalita a mi salud y guárdame mis abrazos acumulados" },
     { fecha: "2026-07-04", diaAsignado: "4 Jul", frase: "¡Mitad del viaje lista! Ya falta menos para volver a verte. Te amo" },
     { fecha: "2026-07-05", diaAsignado: "5 Jul", frase: "Me encantaría hacer nada contigo este domingo. Ve una peli rica hoy" },
-    { fecha: "2026-07-06", diaAsignado: "6 Jul", frase: "¡Cumpleaños de mi persona favorita y último lunes separados. Cuenta regresiva activada..." },
+    { fecha: "2026-07-06", diaAsignado: "6 Jul", frase: "¡Cumpleaños de mi persona favorita y último lunes separados! Momento de abrir tu carta. Cuenta regresiva activada..." },
     { fecha: "2026-07-07", diaAsignado: "7 Jul", frase: "Te amo tanto, por si tenías la duda hoy por la mañana" },
     { fecha: "2026-07-08", diaAsignado: "8 Jul", frase: "Me encantas y me haces una falta tremenda. Ya casi nos vemos" },
     { fecha: "2026-07-09", diaAsignado: "9 Jul", frase: "Solo dos días más... Me debes muchos abrazos" },
     { fecha: "2026-07-10", diaAsignado: "10 Jul", frase: "¡Es mañana! Duerme bien hoy porque este fin de semana te voy a cobrar todos los besos juntos" },
-    { fecha: "2026-07-11", diaAsignado: "11 Jul", frase: "Ya pronto nos vemos! Ya voy de regreso amor ❤️✨" }
+    { fecha: "2026-07-11", diaAsignado: "11 Jul", frase: "¡Pronto nos vemos! Ya voy de regreso amor ❤️✨" }
 ];
 
 const contenedor = document.getElementById("calendario");
