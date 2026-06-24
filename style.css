@@ -198,17 +198,34 @@ h1 {
 
 /* 📸 ESTILOS NUEVOS: Configuración estética para las fotos */
 /* 📸 NUEVA CONFIGURACIÓN: Para que las fotos se vean COMPLETAS sin recortes */
+/* 📸 CONFIGURACIÓN: Para que las fotos se vean completas */
 .modal-foto {
-    width: auto;             /* Deja que el ancho se ajuste de manera natural */
-    max-width: 100%;         /* Evita que se salga de los bordes del modal */
-    height: auto;            /* Mantiene la proporción original */
-    max-height: 380px;       /* Le da un buen límite vertical para fotos altas */
-    object-fit: contain;     /* Obliga al navegador a mostrar la imagen entera */
-    border-radius: 16px;     /* Bordes redondeados estéticos */
-    margin: 0 auto 20px auto;/* La centra perfectamente y le deja espacio abajo */
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 380px;       /* Tamaño ideal para computadoras */
+    object-fit: contain;
+    border-radius: 16px;
+    margin: 0 auto 20px auto;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    display: block;          /* Necesario para que funcione el centrado con 'margin: auto' */
+    display: block;
+}
+
+/* 📱 ADAPTACIÓN PARA CELULARES (Pantallas de menos de 480px de ancho) */
+@media (max-width: 480px) {
+    .modal-foto {
+        max-height: 180px;   /* Reduce la altura considerablemente en celular */
+        margin-bottom: 12px; /* Reduce los espacios vacíos */
+    }
+    
+    .modal-contenido {
+        padding: 30px 20px;  /* Hace el contenedor flotante un poco más compacto */
+    }
+    
+    #frase-texto {
+        font-size: 1.05rem;  /* Achica un pelín el texto para ganar espacio */
+    }
 }
 
 #frase-texto {
