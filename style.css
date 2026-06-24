@@ -212,19 +212,31 @@ h1 {
     display: block;
 }
 
-/* 📱 ADAPTACIÓN PARA CELULARES (Pantallas de menos de 480px de ancho) */
+/* 📱 ADAPTACIÓN SÚPER COMPACTA PARA CELULARES */
 @media (max-width: 480px) {
-    .modal-foto {
-        max-height: 180px;   /* Reduce la altura considerablemente en celular */
-        margin-bottom: 12px; /* Reduce los espacios vacíos */
-    }
-    
     .modal-contenido {
-        padding: 30px 20px;  /* Hace el contenedor flotante un poco más compacto */
+        padding: 20px 15px 15px 15px; /* Reducimos drásticamente el espacio interno del modal */
+        max-width: 85%;              /* Lo hacemos un poquito más angosto para ganar altura */
+    }
+
+    .modal-decoracion {
+        font-size: 1.8rem;           /* Achicamos el emoji musical de arriba */
+        margin-bottom: 8px;          /* Le quitamos espacio abajo al emoji */
+    }
+
+    .modal-foto {
+        max-height: 160px;           /* Reducimos la foto un pelín más (de 180px a 160px) */
+        margin-bottom: 10px;         /* Pegamos más la foto al texto */
     }
     
     #frase-texto {
-        font-size: 1.05rem;  /* Achica un pelín el texto para ganar espacio */
+        font-size: 0.95rem;          /* Un tamaño de letra ligeramente más compacto */
+        line-height: 1.4;            /* Juntamos las líneas del texto */
+        margin-bottom: 10px;         /* Reducimos el espacio antes de Spotify */
+    }
+
+    #spotify-contenedor {
+        margin-top: 10px;            /* Pegamos el reproductor al texto */
     }
 }
 
