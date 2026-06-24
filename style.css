@@ -197,15 +197,18 @@ h1 {
 }
 
 /* 📸 ESTILOS NUEVOS: Configuración estética para las fotos */
+/* 📸 NUEVA CONFIGURACIÓN: Para que las fotos se vean COMPLETAS sin recortes */
 .modal-foto {
-    width: 100%;
-    max-height: 280px;
-    object-fit: cover; /* Mantiene la proporción cortando inteligentemente los bordes */
-    border-radius: 16px;
-    margin-bottom: 20px;
+    width: auto;             /* Deja que el ancho se ajuste de manera natural */
+    max-width: 100%;         /* Evita que se salga de los bordes del modal */
+    height: auto;            /* Mantiene la proporción original */
+    max-height: 380px;       /* Le da un buen límite vertical para fotos altas */
+    object-fit: contain;     /* Obliga al navegador a mostrar la imagen entera */
+    border-radius: 16px;     /* Bordes redondeados estéticos */
+    margin: 0 auto 20px auto;/* La centra perfectamente y le deja espacio abajo */
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    display: block;
+    display: block;          /* Necesario para que funcione el centrado con 'margin: auto' */
 }
 
 #frase-texto {
